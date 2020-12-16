@@ -1,0 +1,19 @@
+export EDITOR=vim
+export PAGER="less -X -R -F"
+
+alias h='history'
+alias ll='ls -l'
+alias ..='cd ..'
+alias l.='ls -d .*'
+alias rm='rm -i'
+
+A() { export A=`pwd`; }
+cda() { cd $A; }
+B() { export B=`pwd`; }
+cdb() { cd $B; }
+C() { export C=`pwd`; }
+cdc() { cd $C; }
+abc() { echo A=$A;echo B=$B;echo C=$C; }
+
+#192.168.1.52:0.0  wsl2host <-- set in /etc/hosts
+export DISPLAY=wsl2host:0.0
