@@ -13,40 +13,25 @@ alias ll='ls -l'
 alias ls='ls -F'
 #alias ls='ls -F --color'
 alias gitlog='git log --oneline'
-alias py27='source ~/bin/path p27'
-alias py37='source ~/bin/path p37'
-alias pyOR='source ~/pyOrbit/activate'
+alias py38='source ~/py38v/bin/activate'
+alias dynacpy='source ~/py38v_dynac/bin/activate'
+alias dynacgui='python dgui.py -p.'
+#alias pyOR='source ~/pyOrbit/activate'
 alias lpath='~/bin/path.awk'
-alias sns='cd /home/wdklotz/examples-master/SNS_Linac/pyorbit_linac_model'
-alias plotit="$DIST_DYNAC_HOME/plot/dynplt l -dg"
-alias astra='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/Astra' 
-alias generator='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/generator' 
+#alias sns='cd /home/wdklotz/examples-master/SNS_Linac/pyorbit_linac_model'
+#alias plotit="$DIST_DYNAC_HOME/plot/dynplt l -dg"
+#alias astra='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/Astra' 
+#alias generator='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/generator' 
 alias explorer="explorer.exe ."
-#unalias vi
+alias os_rel='less /etc/os-release'
+alias dcls='docker container list --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Ports}}"'
+alias dcll='docker container list'
+alias dils='docker image ls'
+alias dvls='docker volume ls'
+alias dnls='docker network ls'
+alias tail='tail -n 25'
+alias vi='vim'
 
-A() {
-export A=`pwd`
-}
-cda(){
-cd $A
-}
-B() {
-export B=`pwd`
-}
-cdb(){
-cd $B
-}
-C() {
-export C=`pwd`
-}
-cdc(){
-cd $C
-}
-abc(){
-echo A=$A
-echo B=$B
-echo C=$C
-}
 envg(){
 env|grep --color $1
 }

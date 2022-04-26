@@ -15,5 +15,11 @@ C() { export C=`pwd`; }
 cdc() { cd $C; }
 abc() { echo A=$A;echo B=$B;echo C=$C; }
 
-#192.168.1.52:0.0  wsl2host <-- set in /etc/hosts
-export DISPLAY=wsl2host:0.0
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi

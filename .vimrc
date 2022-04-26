@@ -1,4 +1,6 @@
 set number
+set ff=unix
 syntax on
-colorscheme blue
+colorscheme   industry
+set fileformat=unix
 
