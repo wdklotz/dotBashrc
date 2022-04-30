@@ -12,17 +12,17 @@ alias l.l='ls -d -l .*'
 alias ll='ls -l'
 alias ls='ls -F'
 #alias ls='ls -F --color'
-alias gitlog='git log --oneline'
-alias py38='source ~/py38v/bin/activate'
-alias dynacpy='source ~/py38v_dynac/bin/activate'
-alias dynacgui='python dgui.py -p.'
+#alias py38='source ~/py38v/bin/activate'
+alias pyDIN='source ~/pyDIN/bin/activate'
+alias pySIM='source ~/pySIM/bin/activate'
+#alias dynacgui='python dgui.py -p.'
 #alias pyOR='source ~/pyOrbit/activate'
 alias lpath='~/bin/path.awk'
 #alias sns='cd /home/wdklotz/examples-master/SNS_Linac/pyorbit_linac_model'
 #alias plotit="$DIST_DYNAC_HOME/plot/dynplt l -dg"
 #alias astra='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/Astra' 
 #alias generator='/home/wdklotz/ASTRA-DESY/Astra_for_64_Bit_Linux/generator' 
-alias explorer="explorer.exe ."
+#alias explorer="explorer.exe ."
 alias os_rel='less /etc/os-release'
 alias dcls='docker container list --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Ports}}"'
 alias dcll='docker container list'
@@ -31,8 +31,4 @@ alias dvls='docker volume ls'
 alias dnls='docker network ls'
 alias tail='tail -n 25'
 alias vi='vim'
-
-envg(){
-env|grep --color $1
-}
 

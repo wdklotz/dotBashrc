@@ -1,12 +1,6 @@
 export EDITOR=vim
 export PAGER="less -X -R -F"
 
-alias h='history'
-alias ll='ls -l'
-alias ..='cd ..'
-alias l.='ls -d .*'
-alias rm='rm -i'
-
 A() { export A=`pwd`; }
 cda() { cd $A; }
 B() { export B=`pwd`; }
@@ -15,11 +9,11 @@ C() { export C=`pwd`; }
 cdc() { cd $C; }
 abc() { echo A=$A;echo B=$B;echo C=$C; }
 
+envg(){
+env|grep --color $1
+}
+
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
