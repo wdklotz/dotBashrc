@@ -9,11 +9,18 @@ C() { export C=`pwd`; }
 cdc() { cd $C; }
 abc() { echo A=$A;echo B=$B;echo C=$C; }
 
-envg(){
-env|grep --color $1
-}
-
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# MY bin
+export PATH=~wdklotz/bin:$PATH
+
+# X11 DISPLAY
+export DISPLAY=192.168.1.52:0.0
+
+# golang
+#export PATH=$PATH:/usr/local/go/bin
+
+#eval `ssh-agent`
+#ssh-add

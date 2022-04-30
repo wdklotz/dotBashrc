@@ -35,3 +35,6 @@ function penv-unset {
     sed -i -e "/^$1=/d" $PENV_PATH
 }
 
+envg(){
+env|grep --color $1
+}

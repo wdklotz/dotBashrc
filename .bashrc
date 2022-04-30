@@ -119,13 +119,4 @@ run_scripts() {
 }
 run_scripts $HOME/.bashrc.d
 
-# X11 DISPLAY
-export DISPLAY=192.168.1.52:0.0
-
-# golang
-export PATH=$PATH:/usr/local/go/bin
-
-#eval `ssh-agent`
-#ssh-add
-
 cd $HOME
