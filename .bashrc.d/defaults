@@ -1,11 +1,11 @@
 export EDITOR=vim
 export PAGER="less -X -R -F"
 
-A() { export A=`pwd`; }
+mA() { export A=`pwd`; }
 cda() { cd $A; }
-B() { export B=`pwd`; }
+mB() { export B=`pwd`; }
 cdb() { cd $B; }
-C() { export C=`pwd`; }
+mC() { export C=`pwd`; }
 cdc() { cd $C; }
 abc() { echo A=$A;echo B=$B;echo C=$C; }
 
