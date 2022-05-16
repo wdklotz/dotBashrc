@@ -1,6 +1,12 @@
 export EDITOR=vim
 export PAGER="less -X -R -F"
 
+alias h='history'
+alias ll='ls -l'
+alias ..='cd ..'
+alias l.='ls -d .*'
+alias rm='rm -i'
+
 mA() { export A=`pwd`; }
 cda() { cd $A; }
 mB() { export B=`pwd`; }
@@ -13,15 +19,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# MY bin
-export PATH=~wdklotz/bin:$PATH
-
-# X11 DISPLAY
-#export DISPLAY=192.168.1.52:0.0
-export DISPLAY=:0.0
-
-# golang
-#export PATH=$PATH:/usr/local/go/bin
-
-#eval `ssh-agent`
-#ssh-add
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi

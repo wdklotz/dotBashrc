@@ -110,8 +110,33 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export DYNAC_HOME=/home/wdklotz/dynacv7r1
+
+# X11 DISPLAY
+export DISPLAY=192.168.1.52:0.0
+# golang
+export PATH=$PATH:/usr/local/go/bin
+# conda
+#export PATH=~wdklotz/miniconda3/bin:$PATH
+#eval `ssh-agent`
+#ssh-add
+# DYNAC
+export DYNAC_HOME=~wdklotz/dynacv7r1
 export PATH=$DYNAC_HOME/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/wdklotz/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/wdklotz/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/wdklotz/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/wdklotz/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 # run scripts
 run_scripts() {
@@ -121,6 +146,3 @@ run_scripts() {
 	done
 }
 run_scripts $HOME/.bashrc.d
-
-cd $HOME
-
